@@ -1,0 +1,8 @@
+
+SELECT CURP, nombre, apellidos, rango, permiso FROM comensales INNER JOIN permisos ON permisos = permisoId;
+
+//Doble Join para encontrar informacion de comensal
+SELECT CURP, nombre, apellidos, rango.rango, permiso FROM comensales 
+INNER JOIN permisos ON permisos = permisoId 
+INNER JOIN rango ON comensales.rango = idRango;
+
